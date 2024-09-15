@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css"
+rel="stylesheet"
+/>
+    <style>
+        body{
+            background-color: rgb(171, 176, 180);
+        }
+        .item1:hover{
+            border:1px solid white;
+            cursor: pointer;
+
+        }
+        .loc:hover{
+            border:1px solid white;
+            height:70px;
+            cursor: pointer;
+
+        }
+        .search:hover{
+            border:1px solid white;
+            height:30px;
+            cursor: pointer;
+
+        }
+        .country:hover{
+            border:1px solid white;
+            height:50px;
+            cursor: pointer;
+
+        }
+        .content:hover{
+            border:1px solid white;
+            cursor: pointer;
+            height:50px;
+        }
+        .icon:hover{
+            border:1px solid rgb(255, 255, 255);
+            cursor: pointer;
+            height:30px;
+        }
+        .f1:hover{
+            text-decoration:solid;
+            color:rgb(44, 111, 170);
+        }
+        .f2:hover{
+            text-decoration:solid;
+            color:rgb(49, 106, 157);
+        }
+        .f3:hover{
+            text-decoration:solid;
+            color:rgb(13, 106, 187);
+        }
+        .f4:hover{
+            text-decoration:solid;
+            color:rgb(32, 122, 200);
+        }
+        .i:hover{
+          height:auto;
+          border: 1px solid white;
+          cursor: pointer;
+        }
+        
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    padding: 5px;
+    width: 500px;
+}
+
+.dropdown {
+    border: none;
+    background-color: #f1f3f5;
+    padding: 13px;
+    border-right: 1px solid #d1d5db;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.search-input {
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-button {
+    background-color: #ff9900;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-button img {
+    width: 20px;* 
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ </style>
+</head>
+<body>
+    <div class="nav1" style="background-color: black; display:flex;flex-direction: row; justify-content:space-evenly;flex-wrap:wrap; azure;">
+        <div class="item1">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.KTDfEdLrGrelL8iwrLr99QHaEo&pid=Api&P=0&h=180" alt="" height="120px"><span>.in</span>
+        </div>
+        <div class="loc" style="margin-top: 30px;">
+            <p>Delivering to patna 800020</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+              </svg><span>Upadte Location</span>
+       </div>
+       <div class="search-bar">
+        <select class="dropdown">
+            <option>All</option>
+            <option value="">Mens Ware</option>
+            <option value="">Womens ware</option>
+            <option value="">Kids ware</option>
+            <option value="">Jewellary</option>
+        </select>
+        <input type="text" placeholder="Search Amazon.in" class="search-input">
+        <button class="search-button">
+            <img src="https://img.icons8.com/ios-filled/50/000000/search.png" alt="Search">
+        </button>    
+    </div>
+       <div class="country" style="display:flex; flex-direction: row; justify-content: space-evenly; margin-top:20px ;">
+        <div class="flag">
+            <img src="https://s.yimg.com/zb/imgv1/16676c2c-38d4-3f0a-8ddd-4a2ff804ed60/t_500x300" alt="india" height="25px" style="margin-top: 20px; margin-right:10px;">
+      </div>
+      <select name="" id="" style="height:30px; margin-top: 20px;background: transparent; color: azure;">
+        <option value="EN">IN</option>
+        <option value="EN">US</option>
+        <option value="EN">UK</option>
+      </select>
+       </div>
+       <div class="content" style="margin-top: 30px;">
+        <p>Hello Sign in<br><b>Accounts & links</b></p>
+        </div>
+        <div class="content" style="margin-top: 30px;">
+            <p>Returns&<br><b>Cards</b></p>
+        </div>
+        <div class="icon" style="margin-top: 30px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+              </svg><span>Cart</span>
+        </div>
+    </div>
+    <div class="nav2" style="background-color:#262727;display: flex; justify-content: space-evenly; flex-direction: row;flex-wrap: wrap; list-style-type: none; height: auto; color: aliceblue;">
+       <li class="i">All</li>
+       <li class="i">Amazon mini TV</li>
+       <li class="i">Sell</li>
+       <li class="i">Best Seller</li>
+       <li class="i">Mobiles</li>
+       <li class="i">Today's deal<li>
+       <li class="i">customer Services</li>
+       <li class="i">Prime</li>
+       <li class="i">Electronics</li>
+       <li class="i">Fashion</li>
+       <li class="i">New Releases</li>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/BAU/Hero/Unrec/D91435399_WLA-BAU-Unrec-Hero_DesktopTallHero_1500x600._CB582928607_.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/Beauty/GW/Makeup-PCsewee._CB563507640_.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/devjyoti/GW/Uber/Nov/D103625178_DesktopTallHero_3000x1200_V3._CB558389732_.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+      <div class="main1" style="display:flex;flex-direction:row;justify-content:space-evenly;flex-wrap:wrap;">
+        <div class="cards" style=" height:400px; width:auto;background-color:white;border-radius:10px; margin:20px;">
+            <div class="header" style="background-color:azure;color:black">
+                <h4>Starting ₹99 | Amazon Brands & more</h4>
+               </div>
+        <div class="item"style="margin:20px; display:flex; flex-direction: row;justify-content:space-evenly;margin: 20px;">
+           <div class="c1">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_furnishings_2._SY116_CB555624324_.jpg" alt="">
+             <p>Womens Clothing</p>
+            </div>
+           <div class="c1">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF2-186-116._SY116_CB636048992_.jpg" alt="">
+            <p>Footware+Handing</p>
+            </div>
+        </div>
+        <div class="item"style="margin:20px; display:flex; flex-direction: row; margin: 20px; justify-content:space-evenly; ">
+        <div class="c1">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF4-186-116._SY116_CB636048992_.jpg" alt="">
+            <p>Watches</p>
+        </div>
+        <div class="c1">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF3-186-116._SY116_CB636048992_.jpg" alt="">
+            <p>Fashion Jewellary</p>
+        </div>
+    </div>
+    </div>
+    <div class="cards" style=" height:400px; width:auto;background-color:white;border-radius:10px; margin: 20px;">
+        <div class="header"style="background-color:azure;color:black" >
+            <h4>Appliances for your home | Up to 55% off</h4>
+           </div>
+    <div class="item"style="margin:20px; display:flex; flex-direction: row; justify-content:space-evenly;  margin: 20px;">
+       <div class="c1">
+        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg" alt="">
+         <p>Air Conditioners</p>
+        </div>
+       <div class="c1">
+        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg" alt="">
+        <p>Refrigirators</p>
+        </div>
+    </div>
+    <div class="item"style="margin:20px; display:flex; flex-direction: row;  margin: 20px; justify-content:space-evenly;margin:20px; ">
+    <div class="c1">
+        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg" alt="">
+        <p>MicroWaves</p>
+    </div>
+    <div class="c1">
+        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg" alt="">
+        <p>Washing Mchines</p>
+    </div>
+    </div>
+</div>
+<div class="cards" style=" height:400px; width:auto;background-color:white;border-radius:10px; margin: 20px;">
+    <div class="header"style="background-color:azure;color:black" >
+        <h4>Starting ₹149 | Headphones</h4>
+       </div>
+<div class="item"style="margin:20px; display:flex; flex-direction:row; justify-content:space-evenly; margin: 20px">
+   <div class="c1">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_boAt_0.5x._SY116_CB553870684_.jpg" alt="">
+     <p>Starting₹249|boat</p>
+    </div>
+   <div class="c1">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Boult_0.5x._SY116_CB553870684_.jpg" alt="">
+    <p>Starting₹349|boult</p>
+    </div>
+</div>
+<div class="item"style="margin:20px; display:flex; flex-direction: row;  margin: 20px; justify-content:space-evenly; ">
+<div class="c1">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Noise_0.5x._SY116_CB553870684_.jpg" alt="">
+    <p>Starting₹649|noise</p>
+</div>
+<div class="c1">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/MSO/PD3/PC_QuadCard_Zeb_0.5x_1._SY116_CB570220221_.jpg" alt="">
+    <p>starting₹149|Zebronics</p>
+</div>
+</div>
+</div>
+</div>
+<div class="main2" style="display:flex;flex-direction:row;justify-content:space-evenly;flex-wrap:wrap;">
+    <div class="cards" style=" height:400px; width:auto;background-color:white;border-radius:10px; margin:20px;">
+        <div class="header" style="background-color:azure;color:black">
+            <h4>Starting ₹99 | Amazon Brands & more</h4>
+           </div>
+    <div class="item"style="margin:20px; display:flex; flex-direction: row;justify-content:space-evenly;margin: 20px;">
+       <div class="c1">
+        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_furnishings_2._SY116_CB555624324_.jpg" alt="">
+         <p>Womens Clothing</p>
+        </div>
+       <div class="c1">
+        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF2-186-116._SY116_CB636048992_.jpg" alt="">
+        <p>Footware+Handing</p>
+        </div>
+    </div>
+    <div class="item"style="margin:20px; display:flex; flex-direction: row; margin: 20px; justify-content:space-evenly; ">
+    <div class="c1">
+        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF4-186-116._SY116_CB636048992_.jpg" alt="">
+        <p>Watches</p>
+    </div>
+    <div class="c1">
+        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF3-186-116._SY116_CB636048992_.jpg" alt="">
+        <p>Fashion Jewellary</p>
+    </div>
+</div>
+</div>
+<div class="cards" style=" height:400px; width:auto;background-color:white;border-radius:10px; margin: 20px;">
+    <div class="header"style="background-color:azure;color:black" >
+        <h4>Appliances for your home | Up to 55% off</h4>
+       </div>
+<div class="item"style="margin:20px; display:flex; flex-direction: row; justify-content:space-evenly;  margin: 20px;">
+   <div class="c1">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF1-186-116._SY116_CB636048992_.jpg" alt="">
+     <p>Womens clothing</p>
+    </div>
+   <div class="c1">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF2-186-116._SY116_CB636048992_.jpg" alt="">
+    <p>Footware+Handing</p>
+    </div>
+</div>
+<div class="item"style="margin:20px; display:flex; flex-direction: row;  margin: 20px; justify-content:space-evenly;margin:20px; ">
+<div class="c1">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF4-186-116._SY116_CB636048992_.jpg" alt="">
+    <p>Watches</p>
+</div>
+<div class="c1">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF3-186-116._SY116_CB636048992_.jpg" alt="">
+    <p>Fashion Jewellary</p>
+</div>
+</div>
+</div>
+<div class="cards" style=" height:400px; width:auto;background-color:white;border-radius:10px; margin: 20px;">
+<div class="header"style="background-color:azure;color:black" >
+    <h4>Starting ₹149 | Headphones</h4>
+   </div>
+<div class="item"style="margin:20px; display:flex; flex-direction:row; justify-content:space-evenly; margin: 20px">
+<div class="c1">
+<img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_boAt_0.5x._SY116_CB553870684_.jpg" alt="">
+ <p>Starting₹249|boat</p>
+</div>
+<div class="c1">
+<img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Boult_0.5x._SY116_CB553870684_.jpg" alt="">
+<p>Starting₹349|boult</p>
+</div>
+</div>
+<div class="item"style="margin:20px; display:flex; flex-direction: row;  margin: 20px; justify-content:space-evenly; ">
+<div class="c1">
+<img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Noise_0.5x._SY116_CB553870684_.jpg" alt="">
+<p>Starting₹649|noise</p>
+</div>
+<div class="c1">
+<img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/MSO/PD3/PC_QuadCard_Zeb_0.5x_1._SY116_CB570220221_.jpg" alt="">
+<p>starting₹149|Zebronics</p>
+</div>
+</div>
+</div>
+</div>
+<div class="main3" style="display:flex;flex-direction:row;justify-content:space-evenly;flex-wrap:wrap;">
+
+    <div class="cards" style=" height:400px; width:450px;background-color:white;border-radius:10px;">
+        <div class="c1" style="margin-top:10px;">
+            <h2 style="text-align: center;">Minimum 50% off | Indoor plants</h2>
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Lawn_Garden/Ud/2024/PCCC/01-379_X_304-min.SY304_CB556163815.jpg" alt="" height="300px">
+        </div>
+    </div>
+    <div class="car1" style="height:400px;width:450px;background-color:white;border-radius: 10px;">
+        <div class="c1"style="margin-top:10px;">
+             <h2 style="text-align: center;">Customers’ Most-Loved products</h2>
+             <img src="https://m.media-amazon.com/images/I/41jc30L1jyL.AC_SY145.jpg" alt="" height="300px">
+         </div>
+     </div>
+     <div class="car2" style=" height:400px; width:450px;background-color:white;">
+        <div class="c1" style="margin-top:10px;">
+             <h2 style="text-align: center;">shoes</h2>
+             <img src="https://m.media-amazon.com/images/I/41JvGgDobKL.SY395_SX395.jpg" alt="" height="300px">
+         </div>
+        </div>
+</div>
+<div class="bg1" style="background-color: white; margin:20px;">
+  <h2>No cost EMI up to 24 months | Starting ₹4,433 INR/month</h2>
+  <div class="bg1" style="display: flex;flex-direction: row; justify-content: space-evenly;flex-wrap:wrap;">
+    <img src="https://m.media-amazon.com/images/I/31GEH239AIL._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/31fMSsn2cpL._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/61r7rylEOWL._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/617VVyhYS9L._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/31QKYTH4pTL._AC_SY200_.jpg" alt="">
+   
+  </div>
+</div>
+<div class="bg2" style="background-color:white; margin:20px;">
+  <h2>Best Sellers in Computers & Accessories
+  </h2>
+  <div class="bg1" style="display: flex;flex-direction: row; justify-content: space-evenly; background-color: white;flex-wrap:wrap;">
+    <img src="https://m.media-amazon.com/images/I/61UzQMCRaeL._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/61xNG4wjOuL._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/41nclnxOSLL._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/61okssN3Y6L._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/51a1LryFTZS._AC_SY200_.jpg" alt="">
+  </div>
+</div>
+
+
+  <div class="sig-in"style="background-color:azure;">
+    <hr>
+    <center>
+        <p>See personalized recommendations</p>
+        <button style="background-color:#beba25; color:black; width:20%;height:40px; border-radius: 12px; border: none;"><a href="./sigin.html">Sign in</a></button>
+        <p>New customer? Start here.</p>
+    </center>
+    <hr>
+  </div>
+  
+<footer style="background-color:#191400; color:white; display:flex;flex-direction:column; list-style-type: none;">
+    <div class="footer" style="display: flex;flex-direction: row; justify-content: space-evenly;">
+    <div class="foot1">
+        <li><b>Get to Know Us</b></li>
+        <li>About Us</li>
+        <li>Careers</li>
+        <li>Press Releases</li>
+        <li>Amazon Science</li>
+    </div>
+    <div class="foot2">
+        <li><b>Connect with Us</b></li>
+        <li>Facebook</li>
+        <li>Twitter</li>
+        <li>Instagram</li>
+    </div>
+    <div class="foot3">
+        <li><b>Make Money with Us</b></li>
+        <li>Sell on Amazon</li>
+        <li>Sell under Amazon<br> Accelerator</li>
+        <li>Protect and Build Your Brand</li>
+        <li>Amazon Global Selling</li>
+        <li>Supply to Amazon</li>
+        <li>Become an Affiliate</li>
+        <li>Fulfilment by Amazon</li>
+        <li>Advertise Your Products</li>
+        <li>Amazon Pay on Merchants</li>
+    </div>
+    </div>
+    <hr>
+    <div class="footer" style="display: flex;flex-direction: row; justify-content:space-evenly;">
+    <div class="l1">
+    <img src="https://tse1.mm.bing.net/th?id=OIP.KTDfEdLrGrelL8iwrLr99QHaEo&pid=Api&P=0&h=180" alt="" height="100px">
+    </div>
+        <div class="l1"style="display: flex;flex-direction:row">
+        <div class="flag1">
+        <img src="https://s.yimg.com/zb/imgv1/16676c2c-38d4-3f0a-8ddd-4a2ff804ed60/t_500x300" alt="india" height="25px" style="margin-top: 30px; margin-right: 10px;"></div>
+      <select name="" id="" style="height:30px;background: transparent;margin-top: 23px; color: azure;">
+        <option value="EN">English</option>
+        <option value="EN">US</option>
+        <option value="EN">UK</option>
+      </select>
+       </div>
+</footer> 
+
+<div class="section2"style="background-color:#262727; color:white;">
+    <div class="foot" style="display:flex;flex-direction: row;justify-content: space-evenly;list-style-type: none;">
+    <div class="f1">
+        <li>AboBooks<br>Books,Art<br>&Collection</li>
+        <li><b>ShopBop</b><br>Designer<br>fashions brands</li>
+    </div>
+    <div class="f2">
+      <li>Amazon Web Services<br>
+        Scalable Cloud<br>
+        Computing Services	</li>  
+        <li>Amazon Business<br>
+            Everything For<br>
+            Your Business</li>
+    </div>
+    <div class="f3">
+        <li>Audible<br>
+            Download<br>
+            Audio Books</li>
+        <li>Prime Now<br>
+            2-Hour Delivery<br>
+            on Everyday Items</li>
+    </div>
+    <div class="f4">
+        <li>IMDb<br>
+            Movies, TV<br>
+            & Celebrities
+             </li>
+        <li>Amazon Prime Music<br>
+            100 million songs, ad-free<br>
+            Over 15 million podcast episodes</li>
+    </div>
+</div>  
+<div class="para">
+      <p style="text-align: center; font-size:20px; font-weight: bold;">Conditions of Use & Sale
+        Privacy Notice
+        Interest-Based Ads
+        © 1996-2024, Amazon.com, Inc. or its affiliates</p>
+</div>
+</div>
+
+
+
+
+ <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
